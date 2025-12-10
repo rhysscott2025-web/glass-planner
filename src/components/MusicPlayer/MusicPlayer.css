@@ -1,0 +1,62 @@
+.music-player-card {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    min-height: 200px;
+
+    /* Default (Mobile/Tablet) - in flow */
+    width: 100%;
+    margin-bottom: 0;
+}
+
+/* Removed previous fixed positioning query to respect Grid Dashboard layout */
+
+.music-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-secondary);
+    padding: 0 0.5rem;
+}
+
+.music-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.music-edit {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0;
+}
+
+.music-input {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    padding: 0.8rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+}
+
+.music-input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.music-help {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+.iframe-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}

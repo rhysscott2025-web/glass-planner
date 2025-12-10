@@ -1,0 +1,130 @@
+.todo-item-wrapper {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-md);
+    margin-bottom: 8px;
+    transition: all 0.2s ease;
+}
+
+.todo-item-wrapper:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    user-select: none;
+}
+
+.todo-item--completed .todo-text {
+    text-decoration: line-through;
+    color: var(--text-secondary);
+}
+
+.todo-drag-handle {
+    color: var(--text-secondary);
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+}
+
+.todo-drag-handle:active {
+    cursor: grabbing;
+}
+
+.todo-checkbox {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid var(--glass-border);
+    background: transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.2s;
+}
+
+.todo-checkbox:hover {
+    border-color: var(--accent-color);
+    background: transparent;
+}
+
+.todo-checkbox--checked {
+    background: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+}
+
+.todo-text {
+    flex: 1;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.todo-action-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    opacity: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.todo-item-wrapper:hover .todo-action-btn,
+.todo-action-btn.active {
+    opacity: 1;
+}
+
+.todo-action-btn:hover,
+.todo-action-btn.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.delete-btn:hover {
+    background: rgba(255, 77, 79, 0.2);
+    color: var(--danger-color);
+}
+
+.todo-details {
+    padding: 0 16px 16px 52px;
+    /* Indent to align with text */
+    animation: slideDown 0.2s ease-out;
+}
+
+.todo-comment-input {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 8px;
+    color: var(--text-secondary);
+    font-family: inherit;
+    font-size: 0.9rem;
+    resize: vertical;
+    outline: none;
+}
+
+.todo-comment-input:focus {
+    border-color: var(--text-secondary);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

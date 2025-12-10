@@ -1,0 +1,22 @@
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--backdrop-blur));
+    -webkit-backdrop-filter: blur(var(--backdrop-blur));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.3s ease;
+}
+
+.glass-card--highlight {
+    background: var(--glass-highlight);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.glass-card--none {
+    background: transparent;
+    backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+}
