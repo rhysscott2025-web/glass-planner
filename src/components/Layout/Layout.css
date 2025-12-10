@@ -22,14 +22,27 @@
 }
 
 @media (max-width: 1024px) {
+    .app-layout {
+        height: auto;
+        overflow: auto;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
     .app-container {
         grid-template-columns: 1fr;
         max-width: 600px;
+        height: auto;
+        gap: 1.5rem;
     }
 }
 
 @media (max-width: 640px) {
     .app-layout {
-        padding: 1rem;
+        padding: 0.5rem;
+    }
+
+    .app-container {
+        gap: 1rem;
     }
 }
