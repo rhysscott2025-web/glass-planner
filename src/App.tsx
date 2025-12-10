@@ -14,6 +14,7 @@ import { PomodoroTimer } from './components/PomodoroTimer/PomodoroTimer';
 import { LandingPage } from './components/LandingPage/LandingPage';
 import { MusicPlayer } from './components/MusicPlayer/MusicPlayer';
 import { TimeBlocker } from './components/TimeBlocker/TimeBlocker';
+import { WaterTracker } from './components/WaterTracker/WaterTracker';
 import { useAuth } from './hooks/useAuth';
 import { useTodos } from './hooks/useTodos';
 import { TodoItem } from './components/TodoItem/TodoItem';
@@ -69,6 +70,7 @@ function App() {
         </div>
         <div className="right-column">
           <MusicPlayer />
+          <WaterTracker />
           <TimeBlocker todos={todos} />
         </div>
       </Layout>
